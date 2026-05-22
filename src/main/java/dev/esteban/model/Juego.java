@@ -203,8 +203,8 @@ public class Juego
             }
         }
 
-        historial.add("Intento " + intentosHechos + ": " + palabra);
         intentosHechos ++;
+        historial.add("Intento " + intentosHechos + ": " + palabra);
 
         for (char letra : palabra.toCharArray())
         {
@@ -255,7 +255,7 @@ public class Juego
             return "La partida ya terminó.";
         }
 
-        int paso = Math.max(1, (int)Math.ceil(ordenadas.size() / 1));
+        int paso = Math.max(1, (int)Math.ceil(ordenadas.size() * 0.01));
 
         switch (tipo)
         {
