@@ -162,7 +162,7 @@ public class Main
             {
                 int n = leerEntero("¿Cuántas letras? ");
 
-                if (n >= 2)
+                if (n >= 7)
                 {
                     return n;
                 }
