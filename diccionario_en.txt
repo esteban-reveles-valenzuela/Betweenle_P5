@@ -5049,6 +5049,7 @@ leading
 leads
 leaf
 league
+leaks
 lean
 learn
 learned
@@ -6005,6 +6006,7 @@ nickname
 nicole
 niger
 nigeria
+nigga
 night
 nightlife
 nightmare
