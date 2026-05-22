@@ -8930,6 +8930,7 @@ suciedad
 sucio
 sucios
 sudando
+sudar
 sudor
 suegra
 sueldo
