@@ -313,7 +313,7 @@ public class Main
         {
             Collator col = Collator.getInstance(new Locale("es", "MX"));
             col.setStrength(Collator.SECONDARY);
-            Comparator comparador = (a, b) -> col.compare(a, b);
+            Comparator comparador = (a, b) -> col.compare(a.toString(), b.toString());
 
             ArrayList<Character> ordenadas = new ArrayList<>(letras);
             ordenadas.sort(comparador);
