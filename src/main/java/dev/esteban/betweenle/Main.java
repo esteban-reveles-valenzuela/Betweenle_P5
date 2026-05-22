@@ -292,7 +292,7 @@ public class Main
         String txtSup;
         if (limSup == null)
         {
-            txtSup = "---";
+            txtSup = "a".repeat(juego.getLongitud());
         }
         else
         {
@@ -302,7 +302,7 @@ public class Main
         String txtInf;
         if (limInf == null)
         {
-            txtInf = "---";
+            txtInf = "z".repeat(juego.getLongitud());
         }
         else
         {
