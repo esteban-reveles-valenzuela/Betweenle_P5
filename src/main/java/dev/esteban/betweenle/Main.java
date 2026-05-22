@@ -37,6 +37,8 @@ public class Main
             System.out.println("\n1) Intentar palabra");
             System.out.println("2) Pedir pista");
             System.out.println("3) Ver historial");
+            System.out.println("4) Rendirse");
+            System.out.println("5) Salir");
 
             System.out.print("Opción: ");
 
@@ -52,6 +54,16 @@ public class Main
             {
                 mostrarHistorial(juego);
                 continue;
+            }
+
+            if (op.equals("4"))
+            {
+                juego.rendirse();
+                break;
+            }
+            if (op.equals("5"))
+            {
+                return;
             }
 
             System.out.print("Palabra: ");
@@ -99,6 +111,11 @@ public class Main
         if (juego.gano())
         {
             System.out.println("Ganaste!!.");
+        }
+        else if (juego.rindio())
+        {
+            System.out.println("Ni modo....\n" +
+                "la palabra secreta era: " + juego.getPalabraSecreta());
         }
         else
         {
@@ -338,7 +355,7 @@ public class Main
 
         if (historial.isEmpty())
         {
-            System.out.println("Sin intentos todavía.");
+            System.out.println("Sin intentos.");
             return;
         }
 

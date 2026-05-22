@@ -1,12 +1,10 @@
 package dev.esteban.model;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.text.Collator;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -41,6 +39,7 @@ public class Juego
     private int intentosHechos;
 
     private boolean gano;
+    private boolean rindio;
     private boolean termino;
 
     private int indiceSup;
@@ -99,6 +98,7 @@ public class Juego
         intentosHechos = 0;
         gano = false;
         termino = false;
+        rindio = false;
 
         indiceSup = 0;
         indiceInf = 0;
@@ -449,6 +449,13 @@ public class Juego
         return porcentajeAbajo - porcentajeSecreta;
     }
 
+    public void rendirse()
+    {
+        termino = true;
+        rindio = true;
+        gano = false;
+    }
+
     public boolean termino()
     {
         return termino;
@@ -507,5 +514,10 @@ public class Juego
     public String getPalabraSecreta()
     {
         return palabraSecreta;
+    }
+
+    public boolean rindio()
+    {
+        return rindio;
     }
 }
