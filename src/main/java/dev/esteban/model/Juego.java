@@ -90,20 +90,6 @@ public class Juego
         }
     }
 
-    private String extraerPalabra(String linea)
-    {
-        int pos = linea.indexOf('|');
-        if (pos < 0) pos = linea.indexOf(';');
-        if (pos < 0) pos = linea.indexOf('\t');
-
-        if (pos >= 0)
-        {
-            return linea.substring(0, pos).trim();
-        }
-
-        return linea.trim();
-    }
-
     public boolean configurar(String idioma, int longitud, int intentosMax)
     {
         this.idioma = idioma;
