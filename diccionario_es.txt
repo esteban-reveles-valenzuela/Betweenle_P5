@@ -1456,6 +1456,7 @@ cargos
 carguen
 caridad
 cariño
+carla
 carmen
 carnada
 carne
@@ -5196,6 +5197,7 @@ jóvenes
 joya
 joyas
 jr
+juana
 judas
 judía
 judicial
