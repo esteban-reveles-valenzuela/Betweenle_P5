@@ -49,6 +49,8 @@ public class Juego
     private String limiteSup;
     private String limiteInf;
 
+    private boolean pistaHecha;
+
     private Comparator<String> comparador;
 
     public Juego()
@@ -99,6 +101,7 @@ public class Juego
         gano = false;
         termino = false;
         rindio = false;
+        pistaHecha = false;
 
         indiceSup = 0;
         indiceInf = 0;
@@ -241,6 +244,11 @@ public class Juego
             return "La partida ya terminó.";
         }
 
+        if (pistaHecha)
+        {
+            return "Ya has pedido una pista.";
+        }
+
         int paso = Math.max(1, (int)Math.ceil(ordenadas.size() * 0.01));
 
         switch (tipo)
@@ -256,7 +264,7 @@ public class Juego
                 int pos = Math.min(actual + paso, indiceSecreta - 1);
 
                 limiteSup = ordenadas.get(pos);
-
+                pistaHecha = true;
                 return "Límite superior movido a: " + limiteSup;
             }
 
@@ -273,11 +281,13 @@ public class Juego
 
                 limiteInf = ordenadas.get(pos);
 
+                pistaHecha = true;
                 return "Límite inferior movido a: " + limiteInf;
             }
 
             case 3:
             {
+                pistaHecha = true;
                 return "Empieza con: " + palabraSecreta.charAt(0);
             }
 
